@@ -11,3 +11,4 @@ sounddevice==0.5.2
 torch==2.7.1
 transformers==4.52.4
 uvicorn
+mediapipe

@@ -63,3 +63,11 @@ async def videod_to_speech(file:UploadFile=File(...)):
         return "Lecture impossible"
     finally:
         os.remove(tmp_video_path)
+
+
+
+
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.environ.get("PORT", 8000))  # fallback sur 8000 localement
+    uvicorn.run("streaming:app", host="0.0.0.0", port=port)
